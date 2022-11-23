@@ -3,7 +3,8 @@
 This code divides the coco format segmentation json file into individual json files according to the file name,
 and merges only the desired files into one json file.
 
-![그림1](https://user-images.githubusercontent.com/66056440/203495399-3f310719-8c29-43ba-a970-cefadc3ddf66.jpg)
+![그림2](https://user-images.githubusercontent.com/66056440/203495919-7f3c8748-fc67-4f48-80c4-940145004bf3.jpg)
+
 
 
 ## :heavy_check_mark: Tested
@@ -35,3 +36,7 @@ python coco_json_split
 python coco_json_merge
 python coco_json_edit(optional)
 ```
+
+## 🚫 Caution
+
+This code only works for coco format segmentation json file.
