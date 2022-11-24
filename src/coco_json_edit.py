@@ -29,7 +29,7 @@ def add_num():
 
 def sub_num():
     # 경로설정
-    file_name = "001" #### 여기를 바꿔주세요 ###
+    file_name = "total" #### 여기를 바꿔주세요 ###
     file_path = './merge_output/'
     in_file_path= file_path+ f'{file_name}.json'
 
@@ -40,6 +40,9 @@ def sub_num():
         for i in range(len(json_file["images"])):
             # json_file의 "images", "annotations" key에 해당하는 기존 value값 전체 빼기
             json_file["images"][i]["file_name"] = json_file["images"][i]["file_name"].replace("001_","")
+            json_file["images"][i]["file_name"] = json_file["images"][i]["file_name"].replace("002_","")
+            json_file["images"][i]["file_name"] = json_file["images"][i]["file_name"].replace("003_","")
+            json_file["images"][i]["file_name"] = json_file["images"][i]["file_name"].replace("004_","")
 
         # 변경된 사항 저장
         with open(f"./edit_output/{file_name}_v02.json","w", encoding= 'utf-8') as write_file:
